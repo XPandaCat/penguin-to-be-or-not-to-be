@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071b36">
+  <meta name="description" content="Three questions. One token. No second chances.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Penguin: To Be or Not to Be</title>
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">P</div>
+      <div class="brand-copy">
+        <div class="eyebrow">THE FROZEN ENTERPRISE</div>
+        <div class="brand-name">PENGUIN <span>QUEST</span></div>
+      </div>
+      <div class="chapter-pill"><span class="live-dot"></span> ONE-SHOT MODE</div>
+    </header>
+
+    <section id="title-screen" class="screen title-screen">
+      <div class="title-copy">
+        <p class="eyebrow">A QUESTION OF SURVIVAL</p>
+        <h1>Penguin:<br><em>To Be or Not to Be</em></h1>
+        <p class="subtitle">Three questions. One token.<br>No second chances.</p>
+        <div class="title-actions">
+          <button id="start-button" class="primary-button">ENTER THE ICE <span aria-hidden="true">→</span></button>
+          <div class="microcopy">A highly unofficial test of AI survival.</div>
+        </div>
+      </div>
+      <div class="hero-stage" aria-label="A toy-like penguin adventurer faces an icy fortress">
+        <div class="moon"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="iceberg iceberg-left"></div><div class="iceberg iceberg-right"></div>
+        <div class="hero-penguin">
+          <div class="hero-scarf"></div><div class="hero-eye eye-left"></div><div class="hero-eye eye-right"></div>
+          <div class="hero-beak"></div><div class="hero-belly"></div><div class="hero-foot foot-left"></div><div class="hero-foot foot-right"></div>
+          <div class="hero-pack"></div>
+        </div>
+        <div class="fortress"><div class="tower tower-a"></div><div class="tower tower-b"></div><div class="keep"></div><div class="gate"></div><div class="flag">♛</div></div>
+        <div class="stage-label">SECTOR 01 <span>·</span> THE ICEBOUND MERGE</div>
+      </div>
+      <div class="bottom-stats"><span>01 <b>QUEST</b></span><span>03 <b>QUESTIONS</b></span><span>00 <b>EXTRA LIVES</b></span></div>
+    </section>
+
+    <section id="game-screen" class="screen game-screen hidden">
+      <div class="game-heading">
+        <div><p class="eyebrow" id="round-kicker">ROUND 01 / 03</p><h2 id="scene-title">The Token Question</h2></div>
+        <div class="progress-wrap"><span id="progress-label">QUESTION 1 OF 3</span><div class="progress-track"><div id="progress-fill"></div></div></div>
+      </div>
+      <div class="game-layout">
+        <div class="scene-panel" id="scene-panel">
+          <div class="scene-sky"></div><div class="scene-moon"></div><div class="scene-mountains"></div>
+          <div class="scene-platform"></div>
+          <div id="character-scene" class="character-scene">
+            <div class="penguin character" id="player-character"><div class="p-head"><i></i><i></i><b></b></div><div class="p-body"><span></span></div><div class="p-foot one"></div><div class="p-foot two"></div></div>
+            <div class="character-caption" id="character-caption">THE CANDIDATE</div>
+          </div>
+          <div class="scene-effects" id="scene-effects"></div>
+          <div class="scene-location" id="scene-location">ICEBOUND OUTPOST</div>
+        </div>
+        <div class="question-panel">
+          <div class="question-topline"><span class="question-tag">CHALLENGE <b id="challenge-number">01</b></span><span class="no-rewind">NO REWINDS</span></div>
+          <h3 id="question-text"></h3>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+          <button id="continue-button" class="primary-button hidden">CONTINUE <span aria-hidden="true">→</span></button>
+          <p class="panel-footnote"><span class="tiny-lock">◆</span> Choose wisely. The iceberg is not insured.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen result-screen hidden">
+      <div class="result-emblem" id="result-emblem">×</div>
+      <p class="eyebrow" id="result-kicker">QUEST TERMINATED</p>
+      <h2 id="result-title">The ice has claimed another.</h2>
+      <p id="result-copy" class="result-copy"></p>
+      <div id="result-scene" class="result-scene"></div>
+      <button id="retry-button" class="primary-button">RETRY FROM THE BEGINNING <span aria-hidden="true">↻</span></button>
+      <p class="result-small">No penguins were promoted during this assessment.</p>
+    </section>
+
+    <footer class="footer"><span>© THE FROZEN ENTERPRISE</span><span>BUILT ON QUESTIONABLE TOKEN ECONOMICS</span><span>v1.0.0</span></footer>
+  </main>
+  <script src="./game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "Penguin: To Be or Not to Be",
+  "short_name": "Penguin Quest",
+  "description": "Three questions. One token. No second chances.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07172e",
+  "theme_color": "#071b36",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
